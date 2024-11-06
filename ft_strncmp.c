@@ -6,7 +6,7 @@
 /*   By: axlleres <axlleres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:55:46 by axlleres          #+#    #+#             */
-/*   Updated: 2024/11/05 11:22:46 by axlleres         ###   ########.fr       */
+/*   Updated: 2024/11/05 12:09:57 by axlleres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <string.h>
 #include <stdio.h>
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	p;
 
@@ -26,6 +26,6 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 		p++;
 	}
 	if (p == n)
-		return 0;
+		return (0);
 	return ((unsigned char)s1[p] - (unsigned char)s2[p]);
 }

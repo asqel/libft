@@ -6,13 +6,13 @@
 /*   By: axlleres <axlleres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:26:16 by axlleres          #+#    #+#             */
-/*   Updated: 2024/11/05 10:26:52 by axlleres         ###   ########.fr       */
+/*   Updated: 2024/11/05 12:14:23 by axlleres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_tolower(int c)
+int	ft_tolower(int c)
 {
-	if ('A' <= c && c <= 'z')
+	if ('A' <= c && c <= 'Z')
 		return (c - 'A' + 'a');
-	return (c);	
+	return (c);
 }
