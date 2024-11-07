@@ -6,7 +6,7 @@
 /*   By: axlleres <axlleres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:14:13 by axlleres          #+#    #+#             */
-/*   Updated: 2024/11/08 00:35:03 by axlleres         ###   ########.fr       */
+/*   Updated: 2024/11/08 00:37:51 by axlleres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
-
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 #endif
