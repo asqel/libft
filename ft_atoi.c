@@ -6,7 +6,7 @@
 /*   By: axlleres <axlleres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 00:01:41 by axlleres          #+#    #+#             */
-/*   Updated: 2024/11/08 13:03:24 by axlleres         ###   ########.fr       */
+/*   Updated: 2024/11/08 22:08:52 by axlleres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,18 @@ static int	is_it_a_espace(char c)
 	return (0);
 }
 
+static void	check_sign(int *sign, const char *s, int *idx)
+{
+	*sign = 0;
+	if (s[*idx] == '+')
+		(*idx)++;
+	else if (s[*idx] == '-')
+	{
+		(*idx)++;
+		*sign = 1;
+	}
+}
+
 int	ft_atoi(const char *nptr)
 {
 	int	res;
@@ -27,16 +39,9 @@ int	ft_atoi(const char *nptr)
 
 	res = 0;
 	i = 0;
-	sign = 0;
 	while (is_it_a_espace(nptr[i]))
 		i++;
-	if (nptr[i] == '+')
-		i++;
-	else if (nptr[i] == '-')
-	{
-		i++;
-		sign = 1;
-	}
+	check_sign(&sign, nptr, &i);
 	while ('0' <= nptr[i] && nptr[i] <= '9')
 	{
 		res *= 10;
