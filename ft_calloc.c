@@ -6,7 +6,7 @@
 /*   By: axlleres <axlleres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 00:10:43 by axlleres          #+#    #+#             */
-/*   Updated: 2024/11/08 00:35:46 by axlleres         ###   ########.fr       */
+/*   Updated: 2024/11/08 13:11:21 by axlleres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	total_size = nmemb * size;
 	if (total_size == 0)
-		return (NULL);
+		return (malloc(0));
 	mem = (unsigned char *)malloc(total_size);
 	if (mem == NULL)
 		return (NULL);
