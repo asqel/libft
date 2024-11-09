@@ -6,7 +6,7 @@
 /*   By: axlleres <axlleres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 22:56:08 by axlleres          #+#    #+#             */
-/*   Updated: 2024/11/08 23:19:35 by axlleres         ###   ########.fr       */
+/*   Updated: 2024/11/09 01:35:18 by axlleres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,16 @@ char	*ft_itoa(int n)
 	if (n == 0)
 		return (ft_strdup("0"));
 	len = number_len(n);
-	res = calloc(len + 1, sizeof(char));
+	res = malloc((len + 1) * sizeof(char));
 	if (res == NULL)
 		return (NULL);
+	res[len] = '\0';
 	if (n < 0)
 	{
 		res[0] = '-';
 		n = -n;
 	}
-	while (n > 0)
+	while (n > 0 && len - 1 >= 0)
 	{
 		res[len - 1] = '0' + (n % 10);
 		n /= 10;
