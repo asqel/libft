@@ -6,7 +6,7 @@
 /*   By: axlleres <axlleres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 01:50:00 by axlleres          #+#    #+#             */
-/*   Updated: 2024/11/09 01:54:36 by axlleres         ###   ########.fr       */
+/*   Updated: 2024/11/12 14:31:00 by axlleres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char temp;
+	char	temp;
 
 	if (n == -2147483648)
 		write(fd, "-2147483648", 11);

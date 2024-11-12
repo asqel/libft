@@ -11,7 +11,7 @@ SRCS =	ft_atoi.c ft_isprint.c ft_memmove.c ft_strchr.c \
 SRCS_BONUS = 	ft_lstlast_bonus.c  ft_lstmap_bonus.c  ft_lstadd_back_bonus.c \
 				ft_lstnew_bonus.c  ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 				ft_lstclear_bonus.c ft_lstdelone_bonus.c  ft_lstiter_bonus.c
-		
+
 OBJS = ${SRCS:.c=.o}
 OBJS_BONUS = ${SRCS_BONUS:.c=.o}
 
@@ -38,5 +38,9 @@ re: fclean all
 
 bonus: $(OBJS) $(OBJS_BONUS)
 	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
+
+so: $(OBJS) $(OBJS_BONUS)
+	gcc -shared $^  -o libft.so
+
 
 .PHONY: all clean fclean re bonus
